@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function Login() {
+export default function StateLogin() {
   const [enteredValues, setEnteredValues] = useState({
     email: '',
     password: '',
@@ -10,6 +10,7 @@ export default function Login() {
     email: false,
     password: false,
   });
+  console.log("StateLogin:",enteredValues, didEdit);
 
   const emailIsInvalid = didEdit.email && !enteredValues.email.includes('@');
 

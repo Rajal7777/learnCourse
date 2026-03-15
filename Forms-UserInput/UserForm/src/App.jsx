@@ -1,12 +1,13 @@
 import Header from './components/Header.jsx';
-import Login from './components/stateLogin.jsx';
+import StateLogin from './components/stateLogin.jsx';
 
 function App() {
+  console.log('happy');
   return (
     <>
       <Header />
       <main>
-        <Login />
+        <StateLogin />
       </main>
     </>
   );
