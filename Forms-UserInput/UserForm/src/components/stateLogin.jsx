@@ -20,11 +20,13 @@ export default function StateLogin() {
     console.log(enteredValues);
   }
 
+  //[identifier]: value for dynamic property name in the state object
   function handleInputChange(identifier, value) {
     setEnteredValues((prevValues) => ({
       ...prevValues,
       [identifier]: value,
     }));
+
     setDidEdit((prev) => ({
       ...prev,
       [identifier]: false,
@@ -49,6 +51,7 @@ export default function StateLogin() {
       <div className="control-row">
         <div className="control no-margin">
           <label htmlFor="email">Email</label>
+          {/* onBlur is a React event that runs when an input loses focus. */}
           <input
             id="email"
             type="email"
@@ -78,7 +81,7 @@ export default function StateLogin() {
       </div>
 
       <p className="form-actions">
-        <button className="button button-flat">Reset</button>
+        <button  className="button button-flat">Reset</button>
         <button className="button">Login</button>
       </p>
     </form>

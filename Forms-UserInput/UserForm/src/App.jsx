@@ -1,5 +1,6 @@
 import Header from './components/Header.jsx';
-import StateLogin from './components/stateLogin.jsx';
+import Signup from './components/Signup.jsx';
+// import StateLogin from './components/stateLogin.jsx';
 
 function App() {
   console.log('happy');
@@ -7,7 +8,7 @@ function App() {
     <>
       <Header />
       <main>
-        <StateLogin />
+        <Signup />
       </main>
     </>
   );
