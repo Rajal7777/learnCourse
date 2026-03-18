@@ -217,7 +217,7 @@ export default function Signup() {
         <ul className="error">
           {formState.errors.map((error) => (
             <li key={error}>{error}</li>
-          ))}
+          ))} 
         </ul>
       )}
 
