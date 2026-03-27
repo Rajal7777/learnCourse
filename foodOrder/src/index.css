@@ -64,10 +64,10 @@ h1 {
 .meal-item {
   background-color: #1d1a16;
   border-radius: 1rem;
-  width: 90%;
   overflow: hidden;
   text-align: center;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+  color: white;
 }
 
 .meal-item article {
@@ -75,12 +75,17 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+ 
 }
 
+.meal-item div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .meal-item img {
   width: 100%;
-  height: 16rem;
+  height: 20rem;
   object-fit: cover;
 }
 
@@ -88,16 +93,14 @@ h1 {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0.75rem 0;
+  color: aliceblue;
 }
 
 .meal-item-description {
   margin: 1rem;
-  height: 20%;
-
 }
 
-
-.btn {
+.meal-item-price {
   padding: 10px 22px;
   border-radius: 6px;
   border: none;
@@ -108,23 +111,6 @@ h1 {
   margin-bottom: 15px;
   text-transform: uppercase;
 }
-
-.btn:hover {
-  background-color: #5a1ab8;
-}
-
-
-.meal-item-price {
-  display: inline-block;
-  background-color: #312c1d;
-  color: #ffc404;
-  font-size: 0.9rem;
-  font-weight: bold;
-  padding: 0.5rem 0.2rem;
-  margin: 0;
-  border-radius: 4px;
-}
-
 
 .meal-item-actions {
   margin-bottom: 1.5rem;
@@ -250,7 +236,6 @@ h1 {
   background-color: transparent;
   border: none;
   color: #ffc404;
-  padding: 5px 0.2rem;
 }
 
 .text-button:hover,

@@ -1,13 +1,20 @@
 import Meals from "./component/Meals";
 import Header from "./component/Header";
-import { MealProvider } from "./store/MealContext";
+import { CartContextProvider } from "./store/CartContext";
+import { UserProgressContextProvider } from "./store/UserProgressContext";
+import Cart from "./component/Cart";
+import Checkout from "./component/Checkout";
 
 function App() {
   return (
-    <MealProvider>
-      <Header title="React logo" />
- <Meals />
-    </MealProvider>
+    <UserProgressContextProvider>
+      <CartContextProvider>
+        <Header title="React logo" />
+        <Meals />
+        <Cart/>
+      <Checkout/>
+      </CartContextProvider>
+    </UserProgressContextProvider>
   );
 }
 
