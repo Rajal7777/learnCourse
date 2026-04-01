@@ -1,10 +1,10 @@
-*{
+* {
   /* margin: 0;
   padding: 0; */
   box-sizing: border-box;
 }
 
-body{
+body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -34,36 +34,51 @@ body{
 
 
 
-.Modal {
+/* .Modal {
   border: none;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0.2);
- transform: translateY(-20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0.2);
+  transform: translateY(-20px);
   transition: all 0.3s ease;
+} */
+
+/* .Modal::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+} */
+
+.Modal {
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  max-width: 400px;
 }
 
 .Modal::backdrop {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.Modal h1{
+button {
+  display: block;
+  margin-top: 10px;
+}
+.Modal h1 {
   text-transform: uppercase;
   color: rgb(133, 192, 243);
   line-height: 0px;
 }
 
-.Modal p{
- padding: 0;
- margin: 0;
+.Modal p {
+  padding: 0;
+  margin: 0;
 }
 
-dialog{
+dialog {
   color: rgb(113, 113, 170);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: larger;
 }
 
-code{
+code {
   font-size: 1.2rem;
 }
 
@@ -74,4 +89,13 @@ code{
 
 .Modal-content {
   padding: 20px;
+}
+
+.textColor {
+  color: black;
+
+}
+
+.col{
+  color: red;
 }

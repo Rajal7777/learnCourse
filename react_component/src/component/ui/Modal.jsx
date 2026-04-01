@@ -1,44 +1,39 @@
 import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 
-export default function Modal({ children, isOpen, onClose }) {
+console.log("modal.jsx")
+export default function Modal({ children, isOpen}) {
   //create a reference to <dialog>
   const dialogRef = useRef(null);
 
   //sync React state to DOM behavior
   useEffect(() => {
-    const dialog = dialogRef.current;
+    const modal = dialogRef.current;
 
-    if (!dialog) return;
 
     if (isOpen) {
       //open modal using native API
-      dialog.showModal();
-    } else {
-      dialog.close();
-    }
+      modal.showModal();
+      console.log("from modal jsx")
+    } 
+
+   return () => modal.close();
   }, [isOpen]); //[isOpen] --> Runs when isOpen changes
 
-  //   handle backdrop click
-  function handleClick(e) {
-    if (e.target === dialogRef.current) {
-      onClose();
-    }
-  }
-
-  function handleClose() {
-    onClose();
-  }
+  // // handle backdrop click
+  // function handleClick(e) {
+  //   if (e.target === dialogRef.current) {
+  //     onClose();
+  //   }
+  // }
 
   return createPortal(
     <>
       <dialog
-        className="Modal"
+      className="Modal"
         ref={dialogRef}
-        onClose={handleClose}
-        onClick={handleClick}
+        
       >
-        <h1>Modal open</h1>
         {children}
       </dialog>
     </>,
