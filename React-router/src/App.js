@@ -3,10 +3,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 //alternate
 // import  { createRoutesFromElements, Route} from 'react-router-dom';
 
-
+import ErrorPage from "./pages/Error";
 import HomePage from "./pages/Home";
-import ProductPage from "./pages/ProductPage";
-
+import ProductsPage from "./pages/Products";
+import RootLayout from "./pages/Root";
 
 //Alternate Method
 /*
@@ -20,12 +20,18 @@ const router = createBrowserRouter(routeDefinations);
 
 */
 
-
-
 //Create the router configuration
+//incase of error react-router provides a errorElement where we can display the Error handeling UI,
 const router = createBrowserRouter([
-  { path: "/", element: <HomePage /> },
-  { path: '/product', element: <ProductPage />}
+  {
+    path: '/',
+    element: <RootLayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      { path: '/', element: <HomePage /> },
+      { path: '/products', element: <ProductsPage /> },
+    ],
+  }
 ]);
 
 function App() {
