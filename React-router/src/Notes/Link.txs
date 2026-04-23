@@ -1,0 +1,63 @@
+//<Link>
+It is a primary tool for client-side naviagation.
+It allows users to move between routes without a full page reload, 
+poroviding fast and smoother single-page application.
+
+Performance: Unlike the standard HTML <a> tag, it prevents a browser refresh and only re-renders the necessary components.
+{ prevents the re http request}
+
+!)Relative Routing: eg: to=".." = realtive path mean the child or the products-card will be appended after the parent path like 
+parent to="/app" then the products-card=""
+after clicking it will get appended to /app/products-card
+
+
+2)absolute path mean it got and absoulte path like /app, /products
+
+
+
+
+import { Link } from 'react-router-dom';
+
+import classes from './MainNavigation.module.css';
+
+function MainNavigation() {
+  return (
+    <header className={classes.header}>
+      <nav>
+        <ul className={classes.list}>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/products">Products</Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
+}
+
+export default MainNavigation;
+
+import { Link } from 'react-router-dom';
+
+import classes from './MainNavigation.module.css';
+
+function MainNavigation() {
+  return (
+    <header className={classes.header}>
+      <nav>
+        <ul className={classes.list}>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/products">Products</Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
+}
+
+export default MainNavigation;

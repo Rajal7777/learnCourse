@@ -1,0 +1,11 @@
+What is NavLink (in simple terms)?
+
+NavLink is just like a normal link (<Link />) in React Router…
+but smarter.
+
+ It knows “am I the current active page?”
+
+
+ React Router gives you an object:
+
+ { isActive: true/false }
