@@ -1,0 +1,7 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+1)createBrowserRouter
+A function used to define your application's route configuration. It takes an array of route objects—each containing a path and the element (component) to display—and returns a router instance.
+
+2)RouterProvider
+A component that takes the router instance created by createBrowserRouter and provides it to your entire React application. It serves as the "provider" that connects your UI to the routing logic.
