@@ -1,0 +1,8 @@
+The useNavigate hook from react-router-dom (v6+) enables programmatic navigation in React applications, allowing navigation to new routes in response to user actions like button clicks, form submissions, or side effects. It returns a function that can take a path (string) or a delta (number) to move through the history stack
+
+import { useNavigate } from 'react-router-dom';
+
+function MyComponent() {
+  const navigate = useNavigate();
+  return <button onClick={() => navigate('/home')}>Go Home</button>;
+}
