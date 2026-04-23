@@ -5,3 +5,20 @@ A function used to define your application's route configuration. It takes an ar
 
 2)RouterProvider
 A component that takes the router instance created by createBrowserRouter and provides it to your entire React application. It serves as the "provider" that connects your UI to the routing logic.
+
+
+//Alternate Method
+/*
+
+//alternate
+// import  { createRoutesFromElements, Route} from 'react-router-dom';
+
+const routeDefinations = createRoutesFromElements(
+    <Route>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/product" element={<ProductPage />} />
+    </Route>
+)
+const router = createBrowserRouter(routeDefinations);
+
+*/

@@ -1,0 +1,3 @@
+
+//Returns an object of key/value-pairs of the dynamic params from the current URL
+//Assuming a route pattern like /posts/:postId is matched by /posts/123 then params.postId will be "123".
