@@ -1,0 +1,101 @@
+* {
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.btn {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background-color: gray;
+  color: white;
+  transition: background-color 0.4s ease;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: rgb(17, 17, 17);
+}
+
+.btn-app {
+  color: aquamarine;
+  margin-right: 15px;
+  padding: 7px 12px;
+}
+
+
+
+/* .Modal {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0.2);
+  transform: translateY(-20px);
+  transition: all 0.3s ease;
+} */
+
+/* .Modal::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+} */
+
+.Modal {
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  max-width: 400px;
+}
+
+.Modal::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+button {
+  display: block;
+  margin-top: 10px;
+}
+.Modal h1 {
+  text-transform: uppercase;
+  color: rgb(133, 192, 243);
+  line-height: 0px;
+}
+
+.Modal p {
+  padding: 0;
+  margin: 0;
+}
+
+dialog {
+  color: rgb(113, 113, 170);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: larger;
+}
+
+code {
+  font-size: 1.2rem;
+}
+
+.Modal.open {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.Modal-content {
+  padding: 20px;
+}
+
+.textColor {
+  color: black;
+
+}
+
+.col{
+  color: red;
+}

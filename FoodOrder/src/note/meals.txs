@@ -1,0 +1,34 @@
+// import { useContext } from "react";
+
+// import { MealContext } from "../store/meal-context";
+// const {meals} = useContext(MealContext);
+// console.log(meals)
+import { useEffect, useState } from "react";
+import MealItem from "./MealItem";
+
+export default function Meals() {
+
+
+  const [meals, setMeals] = useState([]);
+
+  useEffect(() => {
+    async function fetchMeals() {
+      const response = await fetch("http://localhost:3000/meals");
+      const data = await response.json();
+      setMeals(data);
+    }
+
+    fetchMeals();
+  }, []);
+  console.log(meals);
+
+  return (
+    <>
+      <div id="meals">
+        {meals.map((meal) => (
+          <MealItem meal={meal} key={meal.id} />
+        ))}
+      </div>
+    </>
+  );
+}

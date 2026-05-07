@@ -1,0 +1,79 @@
+[ Component Renders ]
+          ↓
+const { data, isLoading, error } = useHttp('/api/meals', {}, [])
+          ↓
+--------------------------------------------------
+|            useHttp Hook Starts                 |
+--------------------------------------------------
+
+          ↓
+[ Initialize State ]
+data = []
+isLoading = false
+error = undefined
+
+          ↓
+[ useEffect Runs (on mount) ]
+          ↓
+Check condition:
+(config.method === 'GET' OR no config)
+          ↓
+        YES
+          ↓
+    call sendRequest()
+          ↓
+
+--------------------------------------------------
+|           sendRequest Function                 |
+--------------------------------------------------
+
+          ↓
+setIsLoading(true)
+          ↓
+[ UI re-renders → Loading state visible ]
+
+          ↓
+call sendHttpRequest(url, config)
+          ↓
+
+--------------------------------------------------
+|        sendHttpRequest (fetch logic)          |
+--------------------------------------------------
+
+          ↓
+fetch('/api/meals', {})
+          ↓
+wait for response
+          ↓
+convert to JSON
+          ↓
+
+   ┌─────────────── SUCCESS ───────────────┐
+   ↓                                      ↓
+response.ok = true                 response.ok = false
+   ↓                                      ↓
+return data                         throw Error
+   ↓                                      ↓
+--------------------------------------------
+
+          ↓
+(back to sendRequest)
+
+   ┌─────────────── SUCCESS ───────────────┐
+   ↓                                      ↓
+setData(resData)                   catch(error)
+                                   ↓
+                            setError(message)
+
+          ↓
+setIsLoading(false)
+          ↓
+[ UI re-renders again ]
+
+--------------------------------------------------
+|            Final State in Component           |
+--------------------------------------------------
+
+data → API response (meals)
+isLoading → false
+error → null OR message

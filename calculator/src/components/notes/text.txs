@@ -1,0 +1,6 @@
+## when we get user data from the input field the output we get is string.
+##so to convert it to number we can simply use " + "
+sign before the output.
+
+eg:-
+ [inputIdentifier]: +newValue,

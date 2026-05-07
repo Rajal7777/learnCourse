@@ -1,0 +1,17 @@
+// const fd = new FormData(event.target);
+// const customerData = Object.fromEntries(fd.entries()); //returns obj {email: test@mail.com}
+
+
+
+  // fetch("http://localhost:3000/orders", {
+  //   method: "POST",
+  //   headers: {
+  //     "content-type": "application/json",
+  //   },
+  //   body: JSON.stringify({
+  //     order: {
+  //       items: cartCtx.items,
+  //       customer: customerData,
+  //     },
+  //   }),
+  // });

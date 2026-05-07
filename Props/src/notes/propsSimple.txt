@@ -1,0 +1,46 @@
+     
+ Rendering LIST IN Jsx
+
+ {### RENDERING MANUALLY ###}    
+1)METHOD 1
+      <ul>
+            <CoreConcept
+              title={CORE_CONCEPTS[0].title}
+              description={CORE_CONCEPTS[0].description}
+              image={CORE_CONCEPTS[0].image}
+            />
+            <CoreConcept
+              title={CORE_CONCEPTS[1].title}
+              description={CORE_CONCEPTS[1].description}
+              image={CORE_CONCEPTS[1].image}
+            />
+            <CoreConcept
+              title={CORE_CONCEPTS[2].title}
+              description={CORE_CONCEPTS[2].description}
+              image={CORE_CONCEPTS[2].image}
+            />
+            //also instead of this we can use shortcut spread operator like this 
+            ==>  <CoreConcept {...CORE_CONCEPTS[1]} which gives the same result as 
+              <CoreConcept
+              title={CORE_CONCEPTS[1].title}
+              description={CORE_CONCEPTS[1].description}
+              image={CORE_CONCEPTS[1].image}
+            />
+          </ul>
+
+
+{### RENDERING DYANAMICALLY ###}
+2)METHOD 2
+
+ { CORE_CONCEPTS.map((item) => <CoreConcept key={item.title} {...item} />) }
+
+ //just to check you can store the data from the parameter to the object and console item
+    {CORE_CONCEPTS.map((item) => {
+                const data = item;
+                console.log('logged from core concepts', data);
+                return(
+                <CoreConcept key={item.title} {...item} />
+                ); }
+              )
+            }
+            //you will get  all the obj stored in the array CORE_CONCEPTS

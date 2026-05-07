@@ -1,0 +1,84 @@
+//import { createContext, useEffect, useState } from "react";
+
+ /*
+
+export const MealContext = createContext({
+  meals: [],
+  orders: [],
+  isLoading: false,
+  error: null,
+  addOrder: (orderData) => { },
+});
+
+export function MealProvider({ children }) {
+  const [meals, setMeals] = useState([]);
+  const [orders, setOrders] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+ 
+  useEffect(() => {
+    async function fetchMeals() {
+      setIsLoading(true);
+      try {
+        const response = await fetch("http://localhost:3000/meals");
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch meals.");
+        }
+
+        const data = await response.json();
+        setMeals(data);
+      } catch (error) {
+        setError(error.message || "Something went wrong.");
+      } finally {
+        setIsLoading(false);
+      }
+    }
+
+    fetchMeals();
+  }, []);
+
+  // const contextValue = {meals,isLoading,error}
+
+  async function addOrder(orderData) {
+    try {
+      const response = await fetch("http://localhost:3000/orders", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(orderData),
+      });
+      if (!response.ok) {
+        throw new Error("Failed to add order.");
+      }
+
+      const data = await response.json();
+
+      setOrders((prev) => {
+        return [data, ...prev];
+      });
+    } catch (error) {
+      setError(error.message || "Something went wrong.");
+    }
+  }
+
+    return (
+      <MealContext
+        value={{
+          meals,
+          orders,
+          isLoading,
+          error,
+          addOrder,
+          orders,
+        }}
+      >
+        {children}
+      </MealContext>
+    );
+  }
+  
+
+ */
